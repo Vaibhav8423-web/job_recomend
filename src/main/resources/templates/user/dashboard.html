@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base::parent(~{::title},~{},~{::#content})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-th-text="${loggedInUser.name}+' | Dashboard'">Dashboard Page</title>
+</head>
+<body >
+    <div id="content">
+        <div data-th-if="${loggedInUser}">
+            <div data-th-replace="~{/user/sidebar::sidebar}"></div>
+         </div>
+         <div class="sm:pl-64 pt-25">
+            <div class="flex justify-center flex-col items-center">
+                <h1 class="text-5xl">Welcome to the dashboard page</h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, incidunt laboriosam. Reprehenderit!
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
